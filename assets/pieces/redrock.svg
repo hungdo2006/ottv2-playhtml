@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#fb7185"/><path d="M25 59 34 32 52 23 72 35 79 60 64 78 38 79Z" fill="#475569" stroke="#0f172a" stroke-width="4" stroke-linejoin="round"/><text x="50" y="61" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#fff">R</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+  <!-- Nền tròn đỏ -->
+  <circle cx="50" cy="50" r="45" fill="#e74c3c" stroke="#c0392b" stroke-width="6"/>
+  <!-- Nắm đấm (Búa) -->
+  <path d="M 25 55 A 7 7 0 0 1 39 50 A 7 7 0 0 1 53 50 A 7 7 0 0 1 65 53 A 7 7 0 0 1 75 60 L 75 70 C 75 85, 60 85, 50 85 C 35 85, 25 80, 25 65 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Khe hở giữa các ngón tay -->
+  <line x1="39" y1="50" x2="39" y2="70" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="53" y1="50" x2="53" y2="70" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="65" y1="53" x2="65" y2="70" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <!-- Ngón cái gập ngang -->
+  <path d="M 21 72 C 21 55, 45 50, 65 65 A 4 4 0 0 1 60 72 C 45 60, 30 65, 30 78 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="4" stroke-linejoin="round"/>
+</svg>
