@@ -1,18 +1,26 @@
 # Piece assets
 
-Replace these three files to reskin the game pieces:
+The game uses six fixed SVG files: three blue pieces for P1 and three red pieces for P2.
 
-- `rock.svg`
-- `paper.svg`
-- `scissors.svg`
+## P1 - Blue
 
-Keep the filenames and paths unchanged. No JavaScript or CSS edits are needed.
+- `bluerock.svg`
+- `bluepaper.svg`
+- `bluescissors.svg`
+
+## P2 - Red
+
+- `redrock.svg`
+- `redpaper.svg`
+- `redscissors.svg`
+
+To change the artwork later, replace the contents of these six files and keep the filenames and paths exactly the same. No JavaScript or CSS changes are needed.
 
 Recommended artwork:
-- square canvas / SVG viewBox
+- SVG with a square `viewBox`
 - transparent background
 - centered subject
 - minimal empty padding
 - readable at small board sizes
 
-If your source artwork is PNG/JPG/WebP, export or convert it to SVG before replacing these files, or update the PIECE_ASSETS mapping in `js/constants.js`.
+The mapping lives in `js/constants.js`.
