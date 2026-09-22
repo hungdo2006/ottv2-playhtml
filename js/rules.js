@@ -138,8 +138,11 @@ export function applyMove(state, from, to, actor) {
       }
     : null;
 
-  state.board[to.row][to.col] = movingPiece;
-  state.board[from.row][from.col] = null;
+  // playhtml's shared state uses CRDT-backed arrays. Direct array index
+  // assignment (row[col] = value) is unsupported at runtime, so replace
+  // board cells with splice instead.
+  state.board[to.row].splice(to.col, 1, movingPiece);
+  state.board[from.row].splice(from.col, 1, null);
   state.moveNumber += 1;
   state.lastMove = {
     from: { ...from },
