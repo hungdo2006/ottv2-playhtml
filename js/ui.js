@@ -2,6 +2,7 @@ import {
   BOARD_SIZE,
   FILES,
   GOALS,
+  PIECE_ASSETS,
   PIECE_LABELS,
   TYPE_NAMES,
 } from "./constants.js";
@@ -126,7 +127,8 @@ function renderBoard(state, selected, legalMoves, myRole, interactive) {
 
       if (piece) {
         html += `<span class="piece ${piece.owner.toLowerCase()} ${piece.type}" data-piece-id="${piece.id}">`;
-        html += `<span class="piece-symbol">${PIECE_LABELS[piece.type]}</span>`;
+        html += `<span class="piece-symbol" hidden>${PIECE_LABELS[piece.type]}</span>`;
+        html += `<img class="piece-image" src="${PIECE_ASSETS[piece.type]}" alt="" draggable="false" onerror="this.hidden=true;this.previousElementSibling.hidden=false" />`;
         html += `<span class="piece-owner">${piece.owner}</span>`;
         html += "</span>";
       }
