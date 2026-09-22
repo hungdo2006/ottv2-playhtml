@@ -117,8 +117,26 @@ export function applyMove(state, from, to, actor) {
   const verdict = validateMove(state, from, to, actor);
   if (!verdict.ok) return verdict;
 
-  const movingPiece = state.board[from.row][from.col];
-  const capturedPiece = state.board[to.row][to.col];
+  const sourcePiece = state.board[from.row][from.col];
+  const targetPiece = state.board[to.row][to.col];
+
+  // IMPORTANT for playhtml/Yjs:
+  // sourcePiece/targetPiece may be synced-store proxy objects. A Yjs-backed
+  // object cannot be inserted at a second location by reference. Create plain
+  // snapshots before writing the destination square instead of moving the
+  // existing proxy object itself.
+  const movingPiece = {
+    id: sourcePiece.id,
+    owner: sourcePiece.owner,
+    type: sourcePiece.type,
+  };
+  const capturedPiece = targetPiece
+    ? {
+        id: targetPiece.id,
+        owner: targetPiece.owner,
+        type: targetPiece.type,
+      }
+    : null;
 
   state.board[to.row][to.col] = movingPiece;
   state.board[from.row][from.col] = null;
