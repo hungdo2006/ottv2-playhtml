@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+  <!-- Nền tròn xanh -->
+  <circle cx="50" cy="50" r="45" fill="#3498db" stroke="#2980b9" stroke-width="6"/>
+  <!-- Ký hiệu V (Kéo) với 2 ngón giơ lên, các ngón khác gập xuống -->
+  <path d="M 35 85 C 28 85, 25 75, 25 60 L 22 28 A 6 6 0 0 1 34 24 L 46 48 L 58 24 A 6 6 0 0 1 70 28 L 58 52 A 6 6 0 0 1 70 56 A 6 6 0 0 1 76 64 L 76 75 C 76 85, 65 85, 55 85 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Khe hở giữa các ngón -->
+  <line x1="46" y1="48" x2="46" y2="65" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="58" y1="52" x2="58" y2="70" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="56" x2="70" y2="70" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <!-- Ngón cái gập đè lên các ngón đã cụp -->
+  <path d="M 21 72 C 21 55, 45 50, 65 65 A 4 4 0 0 1 60 72 C 45 60, 30 65, 30 78 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="4" stroke-linejoin="round"/>
+</svg>

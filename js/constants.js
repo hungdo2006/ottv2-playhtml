@@ -18,6 +18,21 @@ export const PIECE_LABELS = {
   scissors: "S",
 };
 
+// Stable asset paths for each player. To reskin later, replace only these
+// 6 files in assets/pieces/ and keep the filenames unchanged.
+export const PIECE_ASSETS = {
+  P1: {
+    rock: "./assets/pieces/bluerock.svg",
+    paper: "./assets/pieces/bluepaper.svg",
+    scissors: "./assets/pieces/bluescissors.svg",
+  },
+  P2: {
+    rock: "./assets/pieces/redrock.svg",
+    paper: "./assets/pieces/redpaper.svg",
+    scissors: "./assets/pieces/redscissors.svg",
+  },
+};
+
 export const TYPE_NAMES = {
   rock: "Rock",
   paper: "Paper",
