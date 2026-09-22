@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Play OTT v2 locally or online with playhtml real-time synchronization." />
+  <title>OTT v2 | Match</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="game-page">
+  <header class="game-header">
+    <div class="brand-row">
+      <button id="home-button" class="icon-button" type="button" aria-label="Back home">&larr;</button>
+      <a class="brand" href="./index.html">OTT <span>v2</span></a>
+      <span id="mode-badge" class="badge local">LOCAL</span>
+    </div>
+
+    <div id="room-panel" class="room-chip" hidden>
+      <span>Room</span>
+      <strong id="room-code">------</strong>
+      <button id="copy-room" type="button">Copy link</button>
+    </div>
+  </header>
+
+  <main class="game-layout">
+    <aside class="side-panel left-panel">
+      <section class="player-card p2-card">
+        <div class="player-title-row">
+          <div>
+            <span class="player-label">PLAYER 2</span>
+            <h2 id="p2-name">Player 2</h2>
+          </div>
+          <div class="score" id="p2-score">0</div>
+        </div>
+        <p id="p2-pieces" class="piece-counts">R 3 P 3 S 3</p>
+        <p class="goal-copy">Goal: <strong>a1</strong></p>
+      </section>
+
+      <section class="match-card">
+        <div class="match-meta">
+          <span id="round-label">Round 1</span>
+          <span id="turn-label">Turn: P1</span>
+        </div>
+        <p id="status-text">Loading game...</p>
+        <div class="last-move-box">
+          <span>Last move</span>
+          <strong id="last-move">No moves yet.</strong>
+        </div>
+      </section>
+
+      <section class="legend-card">
+        <h3>Capture cycle</h3>
+        <div class="capture-cycle">
+          <span class="mini-piece rock">R</span><b>&gt;</b>
+          <span class="mini-piece scissors">S</span><b>&gt;</b>
+          <span class="mini-piece paper">P</span><b>&gt;</b>
+          <span class="mini-piece rock">R</span>
+        </div>
+        <p>Same types cannot capture each other.</p>
+      </section>
+    </aside>
+
+    <section class="board-area">
+      <div id="board" class="board" aria-label="9 by 9 OTT v2 board"></div>
+      <p class="board-hint">Click a piece, then click a highlighted square.</p>
+    </section>
+
+    <aside class="side-panel right-panel">
+      <section class="player-card p1-card">
+        <div class="player-title-row">
+          <div>
+            <span class="player-label">PLAYER 1</span>
+            <h2 id="p1-name">Player 1</h2>
+          </div>
+          <div class="score" id="p1-score">0</div>
+        </div>
+        <p id="p1-pieces" class="piece-counts">R 3 P 3 S 3</p>
+        <p class="goal-copy">Goal: <strong>i9</strong></p>
+      </section>
+
+      <section id="online-panel" class="online-card" hidden>
+        <div class="online-heading">
+          <h3>Online room</h3>
+          <span><i></i><strong id="online-count">0</strong> online</span>
+        </div>
+        <p>You are: <strong id="my-role">Spectator</strong></p>
+        <p>Spectators: <strong id="spectator-count">0</strong></p>
+
+        <div class="seat-grid">
+          <div class="seat-row">
+            <span>P1 <small id="p1-seat">Available</small></span>
+            <button id="claim-p1" class="button tiny" type="button">Claim</button>
+          </div>
+          <div class="seat-row">
+            <span>P2 <small id="p2-seat">Available</small></span>
+            <button id="claim-p2" class="button tiny" type="button">Claim</button>
+          </div>
+        </div>
+        <button id="leave-seat" class="text-button" type="button" hidden>Leave player seat</button>
+      </section>
+
+      <section class="controls-card">
+        <h3>Match controls</h3>
+        <button id="new-round" class="button primary wide" type="button" hidden>New round</button>
+        <button id="reset-match" class="button secondary wide" type="button">Reset match</button>
+      </section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="loading-overlay" class="loading-overlay" hidden>
+    <div class="loading-card">
+      <div class="spinner"></div>
+      <h2>Connecting to playhtml</h2>
+      <p>Joining the shared room...</p>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "ottv2-playhtml",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OTT v2 - 9x9 Rock Paper Scissors board game with local and playhtml multiplayer modes.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check js/constants.js && node --check js/state.js && node --check js/rules.js && node --check js/ui.js && node --check js/local.js && node --check js/multiplayer.js && node --check js/main.js && node --check js/home.js"
+  }
+}

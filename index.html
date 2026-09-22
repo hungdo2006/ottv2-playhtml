@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OTT v2 - a 9x9 multiplayer Rock Paper Scissors strategy game powered by playhtml." />
+  <title>OTT v2 | Rock Paper Scissors Board Game</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="home-page">
+  <main class="home-shell">
+    <section class="hero-card">
+      <div class="eyebrow">MULTIPLAYER BOARD GAME</div>
+      <h1>OTT <span>v2</span></h1>
+      <p class="hero-copy">
+        Rock, Paper, Scissors becomes a tactical 9x9 board game. Move like a chess king,
+        capture by RPS rules, eliminate one enemy type or reach the opposite goal.
+      </p>
+
+      <div class="piece-preview" aria-label="Rock Paper Scissors pieces">
+        <div class="preview-piece rock"><b>R</b><span>Rock</span></div>
+        <div class="preview-piece paper"><b>P</b><span>Paper</span></div>
+        <div class="preview-piece scissors"><b>S</b><span>Scissors</span></div>
+      </div>
+    </section>
+
+    <section class="launch-card">
+      <h2>Start a match</h2>
+      <label class="field">
+        <span>Display name</span>
+        <input id="player-name" maxlength="24" autocomplete="nickname" placeholder="Player" />
+      </label>
+
+      <button id="play-local" class="button secondary wide" type="button">
+        Local 2-player
+        <small>Two players share one device</small>
+      </button>
+
+      <div class="divider"><span>or play online</span></div>
+
+      <button id="create-online" class="button primary wide" type="button">
+        Create online room
+        <small>Get a code and invite a friend</small>
+      </button>
+
+      <form id="join-form" class="join-form">
+        <label class="field">
+          <span>Room code</span>
+          <input id="room-input" maxlength="16" autocomplete="off" placeholder="ABC123" />
+        </label>
+        <button class="button ghost" type="submit">Join room</button>
+      </form>
+      <p id="home-error" class="form-error" aria-live="polite"></p>
+    </section>
+
+    <section class="rules-card">
+      <h2>Rules at a glance</h2>
+      <div class="rules-grid">
+        <article><b>1 square</b><span>Move in any of 8 directions.</span></article>
+        <article><b>R &gt; S &gt; P &gt; R</b><span>Only the winning type can capture.</span></article>
+        <article><b>Same type blocks</b><span>Equal types cannot capture each other.</span></article>
+        <article><b>2 ways to win</b><span>Eliminate one enemy type or reach the target corner.</span></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    OTT v2 - HTML, CSS, JavaScript and playhtml
+  </footer>
+
+  <script type="module" src="./js/home.js"></script>
+</body>
+</html>
