@@ -128,7 +128,8 @@ function renderBoard(state, selected, legalMoves, myRole, interactive) {
       if (piece) {
         html += `<span class="piece ${piece.owner.toLowerCase()} ${piece.type}" data-piece-id="${piece.id}">`;
         html += `<span class="piece-symbol" hidden>${PIECE_LABELS[piece.type]}</span>`;
-        html += `<img class="piece-image" src="${PIECE_ASSETS[piece.type]}" alt="" draggable="false" onerror="this.hidden=true;this.previousElementSibling.hidden=false" />`;
+        const asset = PIECE_ASSETS[piece.owner]?.[piece.type];
+        html += `<img class="piece-image" src="${asset}" alt="" draggable="false" onerror="this.hidden=true;this.previousElementSibling.hidden=false" />`;
         html += `<span class="piece-owner">${piece.owner}</span>`;
         html += "</span>";
       }
