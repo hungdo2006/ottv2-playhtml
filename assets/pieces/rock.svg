@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Rock placeholder">
-  <circle cx="50" cy="50" r="45" fill="#fbbf24"/>
-  <path d="M25 59 34 32 52 23 72 35 79 60 64 78 38 79Z" fill="#475569" stroke="#0f172a" stroke-width="4" stroke-linejoin="round"/>
-  <text x="50" y="61" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#fff">R</text>
-</svg>
